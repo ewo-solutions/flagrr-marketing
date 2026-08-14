@@ -23,7 +23,7 @@ export default function ClubsPage() {
           { label: "For golfers", href: "/golfers" },
           { label: "Pricing", href: "/#pricing" },
         ]}
-        cta={{ label: "Book a walkthrough", href: "#demo" }}
+        cta={{ label: "Sign up your club", href: "/clubs/signup" }}
       />
       <ClubsHero />
       <ConsoleSection />

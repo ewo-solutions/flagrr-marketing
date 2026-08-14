@@ -112,8 +112,8 @@ export const plan = {
   name: "Flagrr for Clubs",
   price: "R2 500",
   priceWas: "R5 250",
-  badge: "early club special · first 3 months",
-  saleNote: "R2 500 a month for your first three months as an early joining club, then R5 250 / month ex VAT.",
+  badge: "early club special · first month",
+  saleNote: "R2 500 for your first month as an early joining club, then R5 250 / month ex VAT.",
   per: "/ month ex VAT",
   blurb: "One plan. Every feature. Unlimited members, cancel any time.",
   features: [
@@ -129,7 +129,7 @@ export const plan = {
     "Push notifications to segmented member groups",
     "Priority support by phone and email",
   ],
-  cta: "Book a walkthrough",
+  cta: "Sign up your club",
 };
 
 export const footerCols = [

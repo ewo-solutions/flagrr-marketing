@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { plan } from "@/content/home";
 
@@ -52,14 +53,24 @@ export default function PricingSection() {
                 </div>
               ))}
             </div>
-            <a
-              href="#download"
-              style={{ marginTop: "auto", display: "block", textAlign: "center", padding: "14px 20px", borderRadius: 999, background: "#CDDE5C", color: "#12271F", fontSize: 14, fontWeight: 600, transition: "opacity .2s ease" }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
-            >
-              {plan.cta}
-            </a>
+            <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 12 }}>
+              <Link
+                href="/clubs/signup"
+                style={{ display: "block", textAlign: "center", padding: "14px 20px", borderRadius: 999, background: "#CDDE5C", color: "#12271F", fontSize: 14, fontWeight: 600, transition: "opacity .2s ease" }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+              >
+                {plan.cta}
+              </Link>
+              <a
+                href="#download"
+                style={{ display: "block", textAlign: "center", fontSize: 13, fontWeight: 300, color: "rgba(246,245,240,.6)", transition: "color .2s ease" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#F6F5F0")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(246,245,240,.6)")}
+              >
+                Prefer a walkthrough first? &#8594;
+              </a>
+            </div>
           </Reveal>
         </div>
         <p style={{ margin: "30px 0 0", textAlign: "center", fontSize: 13.5, fontWeight: 300, color: "rgba(18,39,31,.55)" }}>

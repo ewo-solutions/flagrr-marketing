@@ -8,6 +8,8 @@ import { useScrollState } from "@/lib/hooks";
 export interface NavLink {
   label: string;
   href: string;
+  /** Renders as an inert pill instead of a link — not wired up yet. */
+  disabled?: boolean;
 }
 
 export default function Nav({
@@ -81,30 +83,49 @@ export default function Nav({
             {l.label}
           </a>
         ))}
-        <a
-          href={cta.href}
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            padding: "10px 20px",
-            borderRadius: 999,
-            background: dark ? "#CDDE5C" : "#12271F",
-            color: dark ? "#12271F" : "#F6F5F0",
-            fontSize: 13,
-            fontWeight: 600,
-            transition: "background .2s ease, color .2s ease",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = dark ? "#FFFFFF" : "#00805A";
-            if (!dark) e.currentTarget.style.color = "#FFFFFF";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = dark ? "#CDDE5C" : "#12271F";
-            if (!dark) e.currentTarget.style.color = "#F6F5F0";
-          }}
-        >
-          {cta.label}
-        </a>
+        {cta.disabled ? (
+          <span
+            aria-disabled="true"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              padding: "10px 20px",
+              borderRadius: 999,
+              background: dark ? "rgba(205,222,92,.35)" : "rgba(18,39,31,.35)",
+              color: dark ? "rgba(18,39,31,.65)" : "rgba(246,245,240,.75)",
+              fontSize: 13,
+              fontWeight: 600,
+              cursor: "not-allowed",
+            }}
+          >
+            {cta.label}
+          </span>
+        ) : (
+          <a
+            href={cta.href}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              padding: "10px 20px",
+              borderRadius: 999,
+              background: dark ? "#CDDE5C" : "#12271F",
+              color: dark ? "#12271F" : "#F6F5F0",
+              fontSize: 13,
+              fontWeight: 600,
+              transition: "background .2s ease, color .2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = dark ? "#FFFFFF" : "#00805A";
+              if (!dark) e.currentTarget.style.color = "#FFFFFF";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = dark ? "#CDDE5C" : "#12271F";
+              if (!dark) e.currentTarget.style.color = "#F6F5F0";
+            }}
+          >
+            {cta.label}
+          </a>
+        )}
       </div>
 
       <button
@@ -157,23 +178,43 @@ export default function Nav({
               {l.label}
             </a>
           ))}
-          <a
-            href={cta.href}
-            onClick={() => setOpen(false)}
-            style={{
-              marginTop: 12,
-              display: "inline-flex",
-              justifyContent: "center",
-              padding: "12px 20px",
-              borderRadius: 999,
-              background: dark ? "#CDDE5C" : "#12271F",
-              color: dark ? "#12271F" : "#F6F5F0",
-              fontSize: 14,
-              fontWeight: 600,
-            }}
-          >
-            {cta.label}
-          </a>
+          {cta.disabled ? (
+            <span
+              aria-disabled="true"
+              style={{
+                marginTop: 12,
+                display: "inline-flex",
+                justifyContent: "center",
+                padding: "12px 20px",
+                borderRadius: 999,
+                background: dark ? "rgba(205,222,92,.35)" : "rgba(18,39,31,.35)",
+                color: dark ? "rgba(18,39,31,.65)" : "rgba(246,245,240,.75)",
+                fontSize: 14,
+                fontWeight: 600,
+                cursor: "not-allowed",
+              }}
+            >
+              {cta.label}
+            </span>
+          ) : (
+            <a
+              href={cta.href}
+              onClick={() => setOpen(false)}
+              style={{
+                marginTop: 12,
+                display: "inline-flex",
+                justifyContent: "center",
+                padding: "12px 20px",
+                borderRadius: 999,
+                background: dark ? "#CDDE5C" : "#12271F",
+                color: dark ? "#12271F" : "#F6F5F0",
+                fontSize: 14,
+                fontWeight: 600,
+              }}
+            >
+              {cta.label}
+            </a>
+          )}
         </div>
       )}
     </nav>

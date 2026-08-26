@@ -30,7 +30,12 @@ export default function PhoneFrame({
   const outerRadius = width * (52 / 330);
   const innerRadius = width * (42 / 330);
   const innerW = width - pad * 2;
-  const contentScale = innerW / NATIVE_W;
+  const innerH = height - pad * 2;
+  // Scale to cover the full bezel opening (not just match its width) — the
+  // opening's aspect ratio isn't exactly the native 393:852 screen ratio, so
+  // a width-only scale left a gap at the bottom. Covering and centering
+  // crops a sliver off the sides instead, which reads as a filled screen.
+  const contentScale = Math.max(innerW / NATIVE_W, innerH / NATIVE_H);
 
   return (
     <div
@@ -55,12 +60,12 @@ export default function PhoneFrame({
         <div
           style={{
             position: "absolute",
-            top: 0,
-            left: 0,
+            top: "50%",
+            left: "50%",
             width: NATIVE_W,
             height: NATIVE_H,
-            transformOrigin: "top left",
-            transform: `scale(${contentScale})`,
+            transformOrigin: "center center",
+            transform: `translate(-50%, -50%) scale(${contentScale})`,
           }}
         >
           {children}

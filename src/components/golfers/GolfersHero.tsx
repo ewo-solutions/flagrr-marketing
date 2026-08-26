@@ -41,7 +41,7 @@ export default function GolfersHero() {
               Get the app
             </a>
             <a
-              href="#faq"
+              href="#referral"
               style={{ display: "inline-flex", padding: "17px 30px", borderRadius: 999, border: "1px solid rgba(246,245,240,.3)", color: "#F6F5F0", fontSize: 15, transition: "border-color .2s ease" }}
               onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#F6F5F0")}
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(246,245,240,.3)")}

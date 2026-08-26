@@ -1,7 +1,7 @@
 export const statBar = [
   { v: "Cross-platform", k: "app, web, desktop" },
   { v: "Automatic", k: "receipt rating" },
-  { v: "4 roles", k: "one console" },
+  { v: "2 roles", k: "one console" },
   { v: "R2 500", k: "a month to start" },
 ];
 
@@ -59,21 +59,23 @@ export const roles: Role[] = [
   {
     name: "staff",
     slug: "staff",
-    title: "Front desk, nothing more",
-    body: "A single screen for the counter: take the code, confirm the voucher, hand over the reward. No training day required.",
+    title: "Front desk and member support",
+    body: "One login for the counter and the inbox: take the code, confirm the voucher, hand over the reward — then claim member enquiries and triage anything urgent. No training day required.",
     caps: [
       "Validate voucher codes in person",
       "See what the reward actually is",
       "Redemptions logged against your name",
+      "Enquiries from the club’s own members",
+      "Claim and hand off tickets, priority triage",
       "Minimal profile, nothing else exposed",
     ],
-    nav: ["Redeem", "History", "Profile"],
+    nav: ["Redeem", "History", "Inbox", "Claimed", "Escalations", "Profile"],
     navActive: 0,
     panel: "Redemption desk",
     stats: [
       { v: "9", k: "Today" },
       { v: "61", k: "This month" },
-      { v: "0", k: "Disputes" },
+      { v: "7", k: "Open enquiries" },
     ],
     rows: [
       { a: "FLGR-8T4K", b: "Twilight Round for Two", c: "valid" },
@@ -81,61 +83,6 @@ export const roles: Role[] = [
       { a: "FLGR-9XD1", b: "Cart Hire — 18 holes", c: "used" },
       { a: "FLGR-5RB8", b: "Halfway House Combo", c: "valid" },
       { a: "FLGR-1KK2", b: "Lesson with the Pro", c: "expired" },
-    ],
-  },
-  {
-    name: "super_admin",
-    slug: "super-admin",
-    title: "Flagrr’s own team",
-    body: "Cross-club oversight: every club, every campaign, every flagged receipt and the audit trail behind all of it.",
-    caps: [
-      "Create and manage every club",
-      "Global ad management",
-      "Cross-club reporting and ad performance",
-      "Full audit log",
-      "Subscription and billing enforcement",
-    ],
-    nav: ["Clubs", "Reporting", "Ads", "Fraud", "Agents", "Audit log"],
-    navActive: 1,
-    panel: "Cross-club reporting",
-    stats: [
-      { v: "14", k: "Clubs live" },
-      { v: "5 218", k: "Members" },
-      { v: "1.9M", k: "FC issued" },
-    ],
-    rows: [
-      { a: "Strand Golf Club", b: "412 members · 61 redemptions", c: "healthy" },
-      { a: "Kingsward Links", b: "338 members · 44 redemptions", c: "healthy" },
-      { a: "Hollowbrook C.C.", b: "190 members · 8 redemptions", c: "watch" },
-      { a: "Vlei Bend Golf Estate", b: "507 members · 88 redemptions", c: "healthy" },
-      { a: "Ardmore Downs", b: "trial · 3 days left", c: "billing" },
-    ],
-  },
-  {
-    name: "support_agent",
-    slug: "support-agent",
-    title: "Member enquiries, handled",
-    body: "A queue of enquiries from the club’s own members, with claiming, hand-off and priority triage — so a member never waits on office hours.",
-    caps: [
-      "Enquiries from the club’s own members",
-      "Claim and hand off tickets",
-      "Priority triage",
-      "Full member context on every reply",
-    ],
-    nav: ["Inbox", "Claimed", "Escalations", "Profile"],
-    navActive: 0,
-    panel: "Support inbox",
-    stats: [
-      { v: "7", k: "Unclaimed" },
-      { v: "2", k: "Priority" },
-      { v: "14m", k: "Median reply" },
-    ],
-    rows: [
-      { a: "Receipt not credited", b: "Strand GC · 4m ago", c: "priority" },
-      { a: "Voucher code rejected", b: "Kingsward · 22m ago", c: "open" },
-      { a: "Tier didn’t update", b: "Vlei Bend · 1h ago", c: "open" },
-      { a: "Export my data", b: "Hollowbrook · 3h ago", c: "claimed" },
-      { a: "Delete account", b: "Ardmore · 5h ago", c: "claimed" },
     ],
   },
 ];

@@ -84,14 +84,12 @@ export default function Hero() {
           Flagrr turns what members already spend at your club into a loyalty programme worth belonging to. Scan a receipt. Earn Flagrr Cash. Redeem it at the club.
         </p>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 14, margin: "44px 0 0" }}>
-          <a
-            href="#download"
-            style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "17px 32px", borderRadius: 999, background: "#CDDE5C", color: "#12271F", fontSize: 15, fontWeight: 600, transition: "background .2s ease" }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "#FFFFFF")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "#CDDE5C")}
+          <span
+            aria-disabled="true"
+            style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "17px 32px", borderRadius: 999, background: "rgba(205,222,92,.35)", color: "rgba(18,39,31,.65)", fontSize: 15, fontWeight: 600, cursor: "not-allowed" }}
           >
-            Get the app
-          </a>
+            Get the app (coming soon)
+          </span>
           <a
             href="#loop"
             style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "17px 30px", borderRadius: 999, border: "1px solid rgba(246,245,240,.3)", color: "#F6F5F0", fontSize: 15, fontWeight: 400, transition: "border-color .2s ease, background .2s ease" }}

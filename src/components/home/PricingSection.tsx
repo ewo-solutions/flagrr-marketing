@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { plan } from "@/content/home";
+import { PHONE_HREF } from "@/content/contact";
 
 export default function PricingSection() {
   return (
@@ -54,14 +54,14 @@ export default function PricingSection() {
               ))}
             </div>
             <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 12 }}>
-              <Link
-                href="/clubs/signup"
+              <a
+                href={PHONE_HREF}
                 style={{ display: "block", textAlign: "center", padding: "14px 20px", borderRadius: 999, background: "#CDDE5C", color: "#12271F", fontSize: 14, fontWeight: 600, transition: "opacity .2s ease" }}
                 onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
                 onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
               >
                 {plan.cta}
-              </Link>
+              </a>
               <a
                 href="#download"
                 style={{ display: "block", textAlign: "center", fontSize: 13, fontWeight: 300, color: "rgba(246,245,240,.6)", transition: "color .2s ease" }}

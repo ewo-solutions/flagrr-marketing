@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import { FooterCondensed } from "@/components/Footer";
 import GolfersHero from "@/components/golfers/GolfersHero";
 import WhatYouGet from "@/components/golfers/WhatYouGet";
+import ReferralSection from "@/components/golfers/ReferralSection";
 import TiersStreaks from "@/components/golfers/TiersStreaks";
 import FAQSection from "@/components/golfers/FAQSection";
 import GetAppSection from "@/components/golfers/GetAppSection";
@@ -28,6 +29,7 @@ export default function GolfersPage() {
       />
       <GolfersHero />
       <WhatYouGet />
+      <ReferralSection />
       <TiersStreaks />
       <FAQSection />
       <GetAppSection />

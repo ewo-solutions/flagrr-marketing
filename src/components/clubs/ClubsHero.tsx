@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useScrollState } from "@/lib/hooks";
 import { statBar } from "@/content/clubs";
+import { PHONE_HREF } from "@/content/contact";
 
 export default function ClubsHero() {
   const { y } = useScrollState();
@@ -28,8 +28,8 @@ export default function ClubsHero() {
             A branded programme, a catalogue you control, and receipts that rate themselves. You keep the members. Flagrr keeps the plumbing.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14, margin: "42px 0 0" }}>
-            <Link
-              href="/clubs/signup"
+            <a
+              href={PHONE_HREF}
               style={{ display: "inline-flex", padding: "17px 32px", borderRadius: 999, background: "#12271F", color: "#F6F5F0", fontSize: 15, fontWeight: 600, transition: "background .2s ease, color .2s ease" }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "#00805A";
@@ -40,8 +40,8 @@ export default function ClubsHero() {
                 e.currentTarget.style.color = "#F6F5F0";
               }}
             >
-              Sign up your club
-            </Link>
+              Sign up your club (coming soon)
+            </a>
             <a
               href="#demo"
               style={{ display: "inline-flex", padding: "17px 30px", borderRadius: 999, border: "1px solid rgba(18,39,31,.25)", color: "#12271F", fontSize: 15, transition: "border-color .2s ease" }}

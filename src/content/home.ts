@@ -129,7 +129,7 @@ export const plan = {
     "Push notifications to segmented member groups",
     "Priority support by phone and email",
   ],
-  cta: "Sign up your club",
+  cta: "Sign up your club (contact us)",
 };
 
 export const footerCols = [

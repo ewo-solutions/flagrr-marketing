@@ -14,7 +14,7 @@ export default function ConsoleSection() {
         <Reveal style={{ maxWidth: "52ch" }}>
           <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".24em", color: "#00805A", textTransform: "uppercase" }}>the console</span>
           <h2 style={{ margin: "24px 0 0", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "clamp(34px,4.6vw,68px)", lineHeight: 0.98, letterSpacing: "-.028em", color: "#12271F" }}>
-            Four roles. One console.
+            Two roles. One console.
           </h2>
           <p style={{ margin: "22px 0 0", fontSize: 17, fontWeight: 300, lineHeight: 1.6, color: "rgba(18,39,31,.7)" }}>
             Club-side Flagrr runs wherever the work happens — the app, the web app or a downloadable desktop app. Same console, same roles, nothing to keep in sync.

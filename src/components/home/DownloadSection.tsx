@@ -14,7 +14,7 @@ export default function DownloadSection() {
           Play. Earn.<br />Redeem. Repeat.
         </Reveal>
         <Reveal delay={1} as="p" style={{ margin: "28px auto 0", maxWidth: "46ch", fontSize: 18, fontWeight: 300, lineHeight: 1.6, color: "rgba(246,245,240,.74)" }}>
-          Free for golfers, forever. Find your club inside the app — or ask them to bring Flagrr in.
+          Free for golfers, forever. Can’t find your club in the app? Get your unique referral code and ask them to join — if they do, you get 1 000 Flagrr Cash to spend however you like.
         </Reveal>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14, margin: "44px 0 0" }}>
           <a
@@ -33,6 +33,14 @@ export default function DownloadSection() {
           >
             Download for Android
           </a>
+          <Link
+            href="/golfers#referral"
+            style={{ display: "inline-flex", alignItems: "center", gap: 11, padding: "17px 30px", borderRadius: 999, border: "1px solid transparent", color: "rgba(246,245,240,.72)", fontSize: 15, fontWeight: 400, transition: "color .2s ease" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#F6F5F0")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(246,245,240,.72)")}
+          >
+            Get my referral code &#8594;
+          </Link>
           <Link
             href="/clubs"
             style={{ display: "inline-flex", alignItems: "center", gap: 11, padding: "17px 30px", borderRadius: 999, border: "1px solid transparent", color: "rgba(246,245,240,.72)", fontSize: 15, fontWeight: 400, transition: "color .2s ease" }}

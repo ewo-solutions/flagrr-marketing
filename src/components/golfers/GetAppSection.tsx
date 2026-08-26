@@ -14,7 +14,7 @@ export default function GetAppSection() {
           Free. Now and later.
         </Reveal>
         <Reveal delay={1} as="p" style={{ margin: "24px auto 0", maxWidth: "44ch", fontSize: 18, fontWeight: 300, lineHeight: 1.6, color: "rgba(246,245,240,.74)" }}>
-          Members never pay for Flagrr. If your club isn’t on it yet, tell them — it takes them thirty minutes.
+          Members never pay for Flagrr. Can’t find your club in the app? Get your unique referral code and ask them to join — if they do, you get 1 000 Flagrr Cash to spend however you like.
         </Reveal>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14, margin: "40px 0 0" }}>
           <a
@@ -34,12 +34,12 @@ export default function GetAppSection() {
             Download for Android
           </a>
           <Link
-            href="/clubs"
+            href="#referral"
             style={{ display: "inline-flex", padding: "17px 26px", borderRadius: 999, color: "rgba(246,245,240,.72)", fontSize: 15, transition: "color .2s ease" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#F6F5F0")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(246,245,240,.72)")}
           >
-            Tell my club &#8594;
+            Get my referral code &#8594;
           </Link>
         </div>
       </div>

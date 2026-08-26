@@ -5,6 +5,7 @@ import ClubsHero from "@/components/clubs/ClubsHero";
 import ConsoleSection from "@/components/clubs/ConsoleSection";
 import BeforeAfterSection from "@/components/clubs/BeforeAfterSection";
 import DemoSection from "@/components/clubs/DemoSection";
+import { PHONE_HREF } from "@/content/contact";
 
 export const metadata: Metadata = {
   title: "For Clubs",
@@ -23,7 +24,7 @@ export default function ClubsPage() {
           { label: "For golfers", href: "/golfers" },
           { label: "Pricing", href: "/#pricing" },
         ]}
-        cta={{ label: "Sign up your club", href: "/clubs/signup" }}
+        cta={{ label: "Sign up your club (coming soon)", href: PHONE_HREF }}
       />
       <ClubsHero />
       <ConsoleSection />

@@ -138,6 +138,7 @@ export const footerCols = [
     links: [
       { label: "For clubs", href: "/clubs" },
       { label: "For golfers", href: "/golfers" },
+      { label: "For advertisers", href: "/advertisers" },
       { label: "How it works", href: "/#loop" },
       { label: "Pricing", href: "/#pricing" },
     ],

@@ -44,7 +44,7 @@ const screenRewards: { title: string; desc: string; price: string; icon: Paramet
  * `screen` selects which app view renders (1-6), mirroring the design
  * reference's parameterised component.
  */
-export default function PhoneScreen({ screen = 1 }: { screen?: 1 | 2 | 3 | 4 | 5 | 6 }) {
+export default function PhoneScreen({ screen = 1 }: { screen?: 1 | 2 | 3 | 4 | 5 | 6 | 7 }) {
   return (
     <div
       style={{
@@ -64,6 +64,7 @@ export default function PhoneScreen({ screen = 1 }: { screen?: 1 | 2 | 3 | 4 | 5
       {screen === 4 && <ScreenTiers />}
       {screen === 5 && <ScreenRewards />}
       {screen === 6 && <ScreenVoucher />}
+      {screen === 7 && <ScreenHomeAd />}
     </div>
   );
 }
@@ -200,6 +201,87 @@ function TabBar() {
         <circle cx="12" cy="8" r="3.6" />
         <path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7" />
       </svg>
+    </div>
+  );
+}
+
+function ScreenHomeAd() {
+  return (
+    <div style={{ position: "absolute", inset: 0, background: "#FFFFFF", overflow: "hidden" }}>
+      <div style={{ background: "#00805A", padding: "62px 24px 46px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
+            <FlagrrIcon color="white" height={24} />
+            <span style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 22, color: "#FFFFFF" }}>Home</span>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <span style={{ position: "relative", display: "flex" }}>
+              <IconBell size={23} color="#FFFFFF" />
+              <span style={{ position: "absolute", top: -2, right: -4, width: 9, height: 9, borderRadius: 5, background: "#CDDE5C" }} />
+            </span>
+            <span style={{ width: 32, height: 32, borderRadius: "50%", background: "rgba(255,255,255,.24)" }} />
+          </div>
+        </div>
+        <div style={{ margin: "16px 0 0", fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 24, color: "#FFFFFF" }}>Hello, Lourens</div>
+      </div>
+
+      <div style={{ margin: "-36px 20px 0", borderRadius: 24, background: "#1F4234", padding: 20, display: "flex", flexDirection: "column", gap: 12 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+          <div>
+            <div style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 36, lineHeight: 1, color: "#FFFFFF", fontVariantNumeric: "tabular-nums" }}>12 480</div>
+            <div style={{ fontSize: 12, color: "#FFFFFF", margin: "3px 0 0" }}>Flagrr Cash</div>
+          </div>
+          <span style={{ display: "inline-flex", alignItems: "center", padding: "6px 11px", borderRadius: 44, background: "linear-gradient(135deg,#A86C0A,#FDD248)", fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 11, letterSpacing: ".06em", color: "#FFFFFF", textTransform: "uppercase" }}>
+            Gold Member
+          </span>
+        </div>
+        <div style={{ height: 10, borderRadius: 44, background: "rgba(255,255,255,.16)", overflow: "hidden" }}>
+          <div style={{ height: "100%", width: "64%", borderRadius: 44, background: "#CDDE5C" }} />
+        </div>
+        <div style={{ fontSize: 11, color: "rgba(255,255,255,.72)" }}>1 786 FC to Platinum</div>
+        <div style={{ height: 50, borderRadius: 44, background: "#CDDE5C", display: "flex", alignItems: "center", justifyContent: "center", gap: 8, fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 15, color: "#1F4234" }}>
+          Redeem Flagrr Cash &#8594;
+        </div>
+      </div>
+
+      <div style={{ position: "relative", margin: "16px 20px 0", borderRadius: 18, overflow: "hidden", border: "1px solid rgba(31,31,31,.08)" }}>
+        <div style={{ padding: "14px 16px", display: "flex", alignItems: "center", gap: 12, background: "linear-gradient(120deg,#12271F,#1F4234)" }}>
+          <span style={{ width: 44, height: 44, flex: "none", borderRadius: 11, background: "rgba(255,255,255,.12)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 15, color: "#CDDE5C" }}>
+            TP
+          </span>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontSize: 13.5, fontWeight: 600, color: "#FFFFFF" }}>Titleist Pro V1 — 20% off</div>
+            <div style={{ fontSize: 10.5, color: "rgba(255,255,255,.7)", margin: "2px 0 0" }}>This month at the pro shop</div>
+          </div>
+          <span style={{ flex: "none", padding: "4px 9px", borderRadius: 6, background: "rgba(255,255,255,.14)", fontFamily: "var(--font-mono)", fontSize: 8, letterSpacing: ".14em", color: "rgba(255,255,255,.75)", textTransform: "uppercase" }}>
+            Ad
+          </span>
+        </div>
+      </div>
+
+      <div style={{ display: "flex", gap: 10, alignItems: "center", margin: "14px 20px 0", padding: 14, borderRadius: 18, background: "#00805A" }}>
+        <span style={{ width: 50, height: 50, flex: "none", borderRadius: 13, background: "#1F4234", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <IconFlame size={24} color="#CDDE5C" />
+        </span>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 17, color: "#FFFFFF" }}>6-Week Streak</div>
+          <div style={{ fontSize: 10.5, color: "rgba(255,255,255,.82)", margin: "2px 0 0" }}>2 more weeks to a 200 FC bonus</div>
+          {StreakDots()}
+        </div>
+      </div>
+
+      <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "12px 20px 0", padding: 13, borderRadius: 18, background: "#CCF2E6", border: ".5px solid #00805A" }}>
+        <span style={{ width: 44, height: 44, borderRadius: 10, background: "#1F4234", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <RewardIcon kind="flag" size={20} color="#CDDE5C" strokeWidth={1.8} />
+        </span>
+        <div>
+          <div style={{ fontSize: 10.5, color: "#4B5563" }}>Your Club</div>
+          <div style={{ fontSize: 14, fontWeight: 600, color: "#1F1F1F", margin: "1px 0 0" }}>Strand Golf Club</div>
+        </div>
+      </div>
+
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 110, background: "linear-gradient(180deg,rgba(255,255,255,0),#FFFFFF 60%)" }} />
+      <TabBar />
     </div>
   );
 }

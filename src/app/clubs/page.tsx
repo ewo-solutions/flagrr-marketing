@@ -22,6 +22,7 @@ export default function ClubsPage() {
         links={[
           { label: "Overview", href: "/" },
           { label: "For golfers", href: "/golfers" },
+          { label: "For advertisers", href: "/advertisers" },
           { label: "Pricing", href: "/#pricing" },
         ]}
         cta={{ label: "Sign up your club (coming soon)", href: PHONE_HREF }}
@@ -34,6 +35,7 @@ export default function ClubsPage() {
         links={[
           { label: "Overview", href: "/" },
           { label: "For golfers", href: "/golfers" },
+          { label: "For advertisers", href: "/advertisers" },
           { label: "Terms", href: "#" },
           { label: "Privacy", href: "#" },
         ]}

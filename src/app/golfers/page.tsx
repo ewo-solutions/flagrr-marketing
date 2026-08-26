@@ -23,6 +23,7 @@ export default function GolfersPage() {
         links={[
           { label: "Overview", href: "/" },
           { label: "For clubs", href: "/clubs" },
+          { label: "For advertisers", href: "/advertisers" },
           { label: "Questions", href: "#faq" },
         ]}
         cta={{ label: "Get the app", href: "#get" }}
@@ -37,6 +38,7 @@ export default function GolfersPage() {
         links={[
           { label: "Overview", href: "/" },
           { label: "For clubs", href: "/clubs" },
+          { label: "For advertisers", href: "/advertisers" },
           { label: "Terms", href: "#" },
           { label: "Privacy", href: "#" },
         ]}

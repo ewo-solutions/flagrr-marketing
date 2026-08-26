@@ -23,6 +23,7 @@ export default function HomePage() {
           { label: "How it works", href: "#loop" },
           { label: "For clubs", href: "/clubs" },
           { label: "For golfers", href: "/golfers" },
+          { label: "For advertisers", href: "/advertisers" },
           { label: "Pricing", href: "#pricing" },
         ]}
         cta={{ label: "Get the app (coming soon)", href: "#download", disabled: true }}

@@ -39,8 +39,8 @@ export default function GolfersPage() {
           { label: "Overview", href: "/" },
           { label: "For clubs", href: "/clubs" },
           { label: "For advertisers", href: "/advertisers" },
-          { label: "Terms", href: "#" },
-          { label: "Privacy", href: "#" },
+          { label: "Terms", href: "/terms" },
+          { label: "Privacy", href: "/privacy" },
         ]}
         legalNote="Flagrr Cash has no monetary value and cannot be bought, sold or cashed out."
       />

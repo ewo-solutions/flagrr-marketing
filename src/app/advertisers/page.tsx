@@ -39,8 +39,8 @@ export default function AdvertisersPage() {
           { label: "Overview", href: "/" },
           { label: "For clubs", href: "/clubs" },
           { label: "For golfers", href: "/golfers" },
-          { label: "Terms", href: "#" },
-          { label: "Privacy", href: "#" },
+          { label: "Terms", href: "/terms" },
+          { label: "Privacy", href: "/privacy" },
         ]}
       />
     </div>

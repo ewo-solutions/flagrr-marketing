@@ -36,8 +36,8 @@ export default function ClubsPage() {
           { label: "Overview", href: "/" },
           { label: "For golfers", href: "/golfers" },
           { label: "For advertisers", href: "/advertisers" },
-          { label: "Terms", href: "#" },
-          { label: "Privacy", href: "#" },
+          { label: "Terms", href: "/terms" },
+          { label: "Privacy", href: "/privacy" },
         ]}
       />
     </div>

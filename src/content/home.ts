@@ -155,9 +155,9 @@ export const footerCols = [
   {
     title: "Legal",
     links: [
-      { label: "Terms of Use", href: "#" },
-      { label: "Privacy Policy", href: "#" },
-      { label: "Flagrr Cash terms", href: "#" },
+      { label: "Terms of Use", href: "/terms" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Flagrr Cash terms", href: "/terms" },
       { label: "[ Contact ]", href: "#" },
     ],
   },

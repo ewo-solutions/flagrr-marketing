@@ -49,26 +49,33 @@ export interface PricingTier {
 
 export const pricingTiers: PricingTier[] = [
   {
-    name: "Starter",
-    price: "R3 500",
+    name: "Club slot",
+    price: "R1 950",
     per: "/ month",
-    blurb: "One placement, one region. A clean way to test the channel.",
-    features: ["One ad placement", "Single region or club group", "Monthly performance summary"],
+    blurb: "One club, all three placements.",
+    features: [],
   },
   {
-    name: "Growth",
-    price: "R9 000",
+    name: "Regional bundle",
+    price: "R14 500",
     per: "/ month",
-    blurb: "Most advertisers start here — full rotation across formats.",
-    features: ["All four placements", "National reach", "Tier and club-group targeting", "Monthly performance summary"],
+    blurb: "Ten clubs in one province.",
+    features: [],
+  },
+  {
+    name: "National",
+    price: "R38 500",
+    per: "/ month",
+    blurb: "Platform-wide, every club, every placement.",
+    features: [],
     featured: true,
   },
   {
-    name: "Partner",
-    price: "Custom",
-    per: "",
-    blurb: "Season-long campaigns, co-branded rewards, first look at new inventory.",
-    features: ["Everything in Growth", "Co-branded reward campaigns", "Priority inventory access", "Dedicated reporting"],
+    name: "Sponsored reward",
+    price: "R9 750",
+    per: "/ month",
+    blurb: "A brand-funded reward in the shop.",
+    features: [],
   },
 ];
 

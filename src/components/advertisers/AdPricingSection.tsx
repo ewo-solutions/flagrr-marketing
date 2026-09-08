@@ -37,15 +37,17 @@ export default function AdPricingSection() {
                 <span style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 38, letterSpacing: "-.03em", color: t.featured ? "#CDDE5C" : "#F6F5F0" }}>{t.price}</span>
                 {t.per && <span style={{ fontSize: 13, opacity: 0.6, paddingBottom: 6 }}>{t.per}</span>}
               </div>
-              <p style={{ margin: "14px 0 22px", fontSize: 14, fontWeight: 300, lineHeight: 1.55, opacity: 0.75 }}>{t.blurb}</p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 10, margin: "0 0 26px" }}>
-                {t.features.map((f) => (
-                  <div key={f} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 13.5, fontWeight: 300, lineHeight: 1.5 }}>
-                    <span style={{ color: "#CDDE5C", fontSize: 11, paddingTop: 2 }}>&#9679;</span>
-                    <span>{f}</span>
-                  </div>
-                ))}
-              </div>
+              <p style={{ margin: "14px 0 26px", fontSize: 14, fontWeight: 300, lineHeight: 1.55, opacity: 0.75 }}>{t.blurb}</p>
+              {t.features.length > 0 && (
+                <div style={{ display: "flex", flexDirection: "column", gap: 10, margin: "0 0 26px" }}>
+                  {t.features.map((f) => (
+                    <div key={f} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 13.5, fontWeight: 300, lineHeight: 1.5 }}>
+                      <span style={{ color: "#CDDE5C", fontSize: 11, paddingTop: 2 }}>&#9679;</span>
+                      <span>{f}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
               <a
                 href={PHONE_HREF}
                 style={{

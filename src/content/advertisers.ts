@@ -17,24 +17,24 @@ export interface AdFormat {
 
 export const adFormats: AdFormat[] = [
   {
-    tag: "home banner",
+    tag: "home banner · 1",
     title: "Home screen banner",
     body: "A card on the golfer’s home feed, between their balance and their streak — the first thing they see when they open the app.",
   },
   {
+    tag: "home banner · 2",
+    title: "Second home banner",
+    body: "A second slot further down the same home feed — a follow-up message, or a different advertiser in rotation.",
+  },
+  {
     tag: "catalogue",
-    title: "Sponsored reward tile",
-    body: "A featured slot in the rewards catalogue itself, sitting alongside the club’s own vouchers and rounds.",
+    title: "Rewards catalogue ad slot",
+    body: "A dedicated ad slot inside the rewards catalogue itself, sitting alongside the club’s own vouchers and rounds.",
   },
   {
-    tag: "receipt screen",
-    title: "Post-scan placement",
-    body: "Shown right after a receipt is approved and Flagrr Cash lands — a moment golfers are already paying attention.",
-  },
-  {
-    tag: "push",
-    title: "Segmented push notification",
-    body: "A one-off push to golfers filtered by club, tier or region, sent through the same system that already reaches them for streaks and rewards.",
+    tag: "branded reward",
+    title: "Sponsored reward",
+    body: "A brand-funded reward listed in the catalogue — golfers redeem it like any other reward, and it doubles as a placement of its own.",
   },
 ];
 

@@ -11,7 +11,7 @@ import { PHONE_HREF } from "@/content/contact";
 
 export const metadata: Metadata = {
   title: "For Advertisers",
-  description: "Put your brand in front of golfers who are already spending — home screen banners, sponsored rewards, post-scan placements and segmented push.",
+  description: "Put your brand in front of golfers who are already spending — two home screen banner slots, a rewards catalogue placement, and a brand-funded sponsored reward.",
 };
 
 export default function AdvertisersPage() {

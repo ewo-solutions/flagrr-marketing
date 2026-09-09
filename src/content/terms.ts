@@ -13,7 +13,7 @@ export const termsSections: LegalSection[] = [
   {
     heading: "1. Who we are",
     body: [
-      "Flagrr is operated by [ LEGAL ENTITY NAME ], registration number [ NUMBER ], of [ REGISTERED ADDRESS ] (\"Flagrr\", \"we\", \"us\").",
+      "Flagrr (\"we\", \"us\") is registered under number [ NUMBER ], based at [ REGISTERED ADDRESS ].",
     ],
   },
   {

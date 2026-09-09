@@ -1,8 +1,9 @@
+export const PHONE_DISPLAY = "061 528 4908";
+export const PHONE_HREF = "tel:+27615284908";
+
 /**
- * No confirmed public phone number yet — matches the site's existing
- * bracketed-placeholder convention (see footer legal line) for pending
- * business details. Swap PHONE_DISPLAY/PHONE_HREF once a real number exists;
- * every "call us" link on the site reads from here.
+ * Live on the Play Store; the App Store listing is still propagating, so
+ * there's no equivalent constant for it yet — iOS download links stay "#"
+ * with a "(coming soon)" label until Apple's review clears.
  */
-export const PHONE_DISPLAY = "[ PHONE NUMBER ]";
-export const PHONE_HREF = "#";
+export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.flagrr.loyalty&hl=en";

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { FlagrrLogo } from "@/components/Logo";
 import Reveal from "@/components/Reveal";
+import { PLAY_STORE_URL } from "@/content/contact";
 
 export default function GetAppSection() {
   return (
@@ -17,16 +18,16 @@ export default function GetAppSection() {
           Members never pay for Flagrr. Can’t find your club in the app? Get your unique referral code and ask them to join — if they do, you get 1 000 Flagrr Cash to spend however you like.
         </Reveal>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14, margin: "40px 0 0" }}>
-          <a
-            href="#"
-            style={{ display: "inline-flex", padding: "17px 30px", borderRadius: 999, background: "#CDDE5C", color: "#12271F", fontSize: 15, fontWeight: 600, transition: "background .2s ease" }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "#FFFFFF")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "#CDDE5C")}
+          <span
+            aria-disabled="true"
+            style={{ display: "inline-flex", padding: "17px 30px", borderRadius: 999, background: "rgba(205,222,92,.35)", color: "rgba(18,39,31,.65)", fontSize: 15, fontWeight: 600, cursor: "not-allowed" }}
           >
-            Download for iOS
-          </a>
+            Download for iOS (coming soon)
+          </span>
           <a
-            href="#"
+            href={PLAY_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{ display: "inline-flex", padding: "17px 30px", borderRadius: 999, background: "rgba(246,245,240,.08)", border: "1px solid rgba(246,245,240,.28)", color: "#F6F5F0", fontSize: 15, fontWeight: 500, transition: "border-color .2s ease" }}
             onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#F6F5F0")}
             onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(246,245,240,.28)")}

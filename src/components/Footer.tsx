@@ -1,6 +1,7 @@
 "use client";
 
 import { FlagrrLogo } from "@/components/Logo";
+import SocialIcons from "@/components/SocialIcons";
 import { footerCols } from "@/content/home";
 
 export function FooterFull() {
@@ -21,6 +22,9 @@ export function FooterFull() {
           <p style={{ margin: "20px 0 0", maxWidth: "32ch", fontSize: 13.5, fontWeight: 300, lineHeight: 1.65, color: "rgba(246,245,240,.55)" }}>
             Loyalty for golf clubs and the people who play them.
           </p>
+          <div style={{ margin: "22px 0 0" }}>
+            <SocialIcons />
+          </div>
         </div>
         {footerCols.map((col) => (
           <div key={col.title}>
@@ -92,10 +96,13 @@ export function FooterCondensed({
         }}
       >
         <FlagrrLogo color="white" height={46} style={{ opacity: 0.9 }} />
-        <div style={{ display: "flex", gap: 26, flexWrap: "wrap" }}>
-          {links.map((l) => (
-            <FooterLink key={l.label} href={l.href} label={l.label} />
-          ))}
+        <div style={{ display: "flex", alignItems: "center", gap: 30, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 26, flexWrap: "wrap" }}>
+            {links.map((l) => (
+              <FooterLink key={l.label} href={l.href} label={l.label} />
+            ))}
+          </div>
+          <SocialIcons />
         </div>
       </div>
       <div

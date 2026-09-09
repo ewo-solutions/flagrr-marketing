@@ -16,22 +16,8 @@ export default function DemoSection() {
           Thirty minutes, your catalogue on screen, and a straight answer on what it costs.
         </Reveal>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14, margin: "40px 0 0" }}>
-          <Link
-            href="/clubs/signup"
-            style={{ display: "inline-flex", padding: "17px 32px", borderRadius: 999, background: "#12271F", color: "#F6F5F0", fontSize: 15, fontWeight: 600, transition: "background .2s ease, color .2s ease" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#00805A";
-              e.currentTarget.style.color = "#FFFFFF";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#12271F";
-              e.currentTarget.style.color = "#F6F5F0";
-            }}
-          >
-            Sign up your club
-          </Link>
           <a
-            href="#"
+            href="mailto:emile@ewosolutions.com"
             style={{ display: "inline-flex", padding: "17px 30px", borderRadius: 999, border: "1px solid rgba(18,39,31,.25)", color: "#12271F", fontSize: 15, transition: "border-color .2s ease" }}
             onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#12271F")}
             onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(18,39,31,.25)")}

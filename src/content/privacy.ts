@@ -14,7 +14,7 @@ export const privacySections: LegalSection[] = [
   {
     heading: "1. Who this applies to",
     body: [
-      "This policy covers golfers using the Flagrr app, club staff using the club console, and visitors to this website. Flagrr is registered under number [ NUMBER ], based at [ REGISTERED ADDRESS ].",
+      "This policy covers golfers using the Flagrr app, club staff using the club console, and visitors to this website.",
     ],
   },
   {

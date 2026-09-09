@@ -51,7 +51,7 @@ export function FooterFull() {
           color: "rgba(246,245,240,.38)",
         }}
       >
-        <span>© 2026 Flagrr · Reg. [ NUMBER ] · [ REGISTERED ADDRESS ]</span>
+        <span>© 2026 Flagrr</span>
         <span>[ SUPPORT@DOMAIN ] · Governed by South African law (POPIA) — pending legal review</span>
       </div>
     </footer>
@@ -110,7 +110,7 @@ export function FooterCondensed({
           color: "rgba(246,245,240,.38)",
         }}
       >
-        © 2026 Flagrr · Reg. [ NUMBER ] · [ ADDRESS ] · POPIA — pending legal review{legalNote ? ` · ${legalNote}` : ""}
+        © 2026 Flagrr · POPIA — pending legal review{legalNote ? ` · ${legalNote}` : ""}
       </div>
     </footer>
   );

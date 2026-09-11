@@ -26,7 +26,7 @@ export default function HomePage() {
           { label: "For advertisers", href: "/advertisers" },
           { label: "Pricing", href: "#pricing" },
         ]}
-        cta={{ label: "Get the app (coming soon)", href: "#download", disabled: true }}
+        cta={{ label: "Get the app", href: "#download" }}
       />
       <Hero />
       <AudienceSplit />

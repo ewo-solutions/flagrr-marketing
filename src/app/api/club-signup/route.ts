@@ -8,6 +8,7 @@ export interface ClubSignupInput {
   adminFirstName: string;
   adminLastName: string;
   adminEmail: string;
+  referralCode?: string;
 }
 
 export interface ClubSignupSuccess {
@@ -47,6 +48,7 @@ export async function POST(req: Request) {
   const adminFirstName = body.adminFirstName?.trim();
   const adminLastName = body.adminLastName?.trim();
   const adminEmail = body.adminEmail?.trim().toLowerCase();
+  const referralCode = body.referralCode?.trim() || undefined;
 
   if (!courseName || !contactEmail || !adminFirstName || !adminLastName || !adminEmail) {
     return badRequest("Please fill in the club name, contact email, and admin name and email.");
@@ -83,6 +85,7 @@ export async function POST(req: Request) {
         adminFirstName,
         adminLastName,
         adminEmail,
+        referralCode,
         returnUrl,
         cancelUrl,
       }),

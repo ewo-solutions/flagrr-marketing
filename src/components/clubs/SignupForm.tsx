@@ -84,6 +84,7 @@ export default function SignupForm() {
       adminFirstName: String(data.get("adminFirstName") || "").trim(),
       adminLastName: String(data.get("adminLastName") || "").trim(),
       adminEmail,
+      referralCode: String(data.get("referralCode") || "").trim() || undefined,
     };
 
     setSubmitting(true);
@@ -144,6 +145,10 @@ export default function SignupForm() {
 
       <Field id={`${idPrefix}-contactPhone`} label="Club contact phone (optional)">
         <input id={`${idPrefix}-contactPhone`} name="contactPhone" type="tel" autoComplete="tel" style={inputStyle} placeholder="021 555 0100" />
+      </Field>
+
+      <Field id={`${idPrefix}-referralCode`} label="Referral code (optional)">
+        <input id={`${idPrefix}-referralCode`} name="referralCode" type="text" autoComplete="off" style={inputStyle} placeholder="FLGR-XXXX" />
       </Field>
 
       {error && (

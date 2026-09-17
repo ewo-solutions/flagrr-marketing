@@ -26,7 +26,7 @@ export default function AdvertisersPage() {
           { label: "For golfers", href: "/golfers" },
           { label: "Ad formats", href: "#formats" },
         ]}
-        cta={{ label: "Advertise with Flagrr (coming soon)", href: PHONE_HREF }}
+        cta={{ label: "Advertise with Flagrr", href: PHONE_HREF }}
       />
       <AdvertisersHero />
       <FormatsSection />

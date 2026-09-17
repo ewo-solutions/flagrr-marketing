@@ -23,7 +23,7 @@ export default function AdvertisersHero() {
               onMouseEnter={(e) => (e.currentTarget.style.background = "#FFFFFF")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "#CDDE5C")}
             >
-              Advertise with Flagrr (coming soon)
+              Advertise with Flagrr
             </a>
             <a
               href="#formats"

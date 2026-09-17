@@ -28,7 +28,7 @@ export default function AdCTASection() {
               e.currentTarget.style.color = "#F6F5F0";
             }}
           >
-            Advertise with Flagrr (coming soon)
+            Advertise with Flagrr
           </a>
         </div>
       </div>

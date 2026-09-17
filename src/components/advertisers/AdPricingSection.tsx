@@ -65,7 +65,7 @@ export default function AdPricingSection() {
                 onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
                 onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
               >
-                Enquire (coming soon)
+                Enquire
               </a>
             </Reveal>
           ))}

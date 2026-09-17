@@ -148,7 +148,7 @@ export default function SignupForm() {
       </Field>
 
       <Field id={`${idPrefix}-referralCode`} label="Referral code (optional)">
-        <input id={`${idPrefix}-referralCode`} name="referralCode" type="text" autoComplete="off" style={inputStyle} placeholder="FLGR-XXXX" />
+        <input id={`${idPrefix}-referralCode`} name="referralCode" type="text" autoComplete="off" style={inputStyle} placeholder="e.g. 7KHT9L" />
       </Field>
 
       {error && (

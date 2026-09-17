@@ -14,6 +14,21 @@ export const tierRows = [
   { name: "Platinum", req: "From 15 000 FC · birthday 200 FC · R200 bar voucher a quarter", mult: "×1.7", width: "100%", bar: "linear-gradient(90deg,#00805A,#CDDE5C)", bg: "rgba(205,222,92,.1)", border: "rgba(205,222,92,.4)", fg: "#CDDE5C" },
 ];
 
+export const referralWays = [
+  {
+    tag: "friend",
+    title: "Refer a friend",
+    amount: "15 FC",
+    body: "A friend signs up and enters your code — you get 15 Flagrr Cash the moment their account is created.",
+  },
+  {
+    tag: "club",
+    title: "Refer a golf club",
+    amount: "500 FC",
+    body: "A club signs up for Flagrr using your code — you get 500 Flagrr Cash once their first payment clears.",
+  },
+];
+
 export const faqs = [
   { q: "What is Flagrr Cash, really?", a: "A loyalty currency, not money. You earn it on what you spend at the club and redeem it for rewards your club offers. It has no monetary value, can’t be bought, sold, transferred or cashed out — only earned and redeemed." },
   { q: "How much do I earn?", a: "Baseline is R1 spent = 1 Flagrr Cash. Your club can set richer rates on specific products or activities, and your tier multiplier stacks on top: Bronze 1x, Silver 1.2x, Gold 1.5x, Platinum 1.7x." },

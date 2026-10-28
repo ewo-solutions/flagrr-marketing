@@ -13,7 +13,7 @@ export default function TiersStreaks() {
             Play more, earn faster.
           </h2>
           <p style={{ margin: "22px 0 0", maxWidth: "40ch", fontSize: 17, fontWeight: 300, lineHeight: 1.62, color: "rgba(246,245,240,.74)" }}>
-            Every tier lifts the rate on every rand. Keep a streak going and it lifts again. Nothing expires while you’re playing.
+            Every tier lifts what you earn at your home club. Keep a weekly streak going and it pays a bonus on top.
           </p>
         </Reveal>
         <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>

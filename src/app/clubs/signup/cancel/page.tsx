@@ -46,8 +46,8 @@ export default function SignupCancelPage() {
         links={[
           { label: "Overview", href: "/" },
           { label: "For clubs", href: "/clubs" },
-          { label: "Terms", href: "#" },
-          { label: "Privacy", href: "#" },
+          { label: "Terms", href: "/terms" },
+          { label: "Privacy", href: "/privacy" },
         ]}
       />
     </div>

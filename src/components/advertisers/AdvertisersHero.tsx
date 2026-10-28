@@ -14,7 +14,7 @@ export default function AdvertisersHero() {
             Reach golfers who are already spending.
           </h1>
           <p style={{ margin: "26px 0 0", maxWidth: "46ch", fontSize: 18, fontWeight: 300, lineHeight: 1.62, color: "rgba(246,245,240,.76)" }}>
-            Flagrr sits in a golfer’s pocket at the exact moment they’re thinking about their club — scanning a receipt, checking their balance, picking a reward. Put your brand in that moment, not around it.
+            Flagrr sits in a golfer’s pocket at the exact moment they’re thinking about their club — scanning a receipt, checking their Flagrr Cash, picking a reward. Put your brand in that moment, not around it.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14, margin: "40px 0 0" }}>
             <a

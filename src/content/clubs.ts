@@ -1,5 +1,5 @@
 export const statBar = [
-  { v: "Cross-platform", k: "app, web, desktop" },
+  { v: "Cross-platform", k: "app and web" },
   { v: "Automatic", k: "receipt rating" },
   { v: "2 roles", k: "one console" },
   { v: "R2 500", k: "a month to start" },

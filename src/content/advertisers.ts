@@ -1,12 +1,12 @@
-// Placeholder content for the advertiser-facing page. Reach, engagement and
-// pricing figures below are illustrative — swap for real numbers once
-// Flagrr has enough live clubs and members to report them honestly.
+// Content for the advertiser-facing page. Pricing figures below are
+// illustrative. Do not add reach, member-count or engagement figures until
+// they are real and approved (see docs/Brand-Kit.md in the flaggr repo).
 
 export const statBar = [
-  { v: "18 400+", k: "app opens a month" },
-  { v: "63%", k: "weekly active golfers" },
-  { v: "R1 = 1 FC", k: "every receipt scanned" },
-  { v: "4", k: "ad placements" },
+  { v: "2", k: "home screen banners" },
+  { v: "1", k: "rewards catalogue slot" },
+  { v: "1", k: "sponsored reward" },
+  { v: "Taps & impressions", k: "reported back" },
 ];
 
 export interface AdFormat {
@@ -19,7 +19,7 @@ export const adFormats: AdFormat[] = [
   {
     tag: "home banner · 1",
     title: "Home screen banner",
-    body: "A card on the golfer’s home feed, between their balance and their streak — the first thing they see when they open the app.",
+    body: "A card on the golfer’s home feed, between their Flagrr Cash and their streak — the first thing they see when they open the app.",
   },
   {
     tag: "home banner · 2",
@@ -52,7 +52,7 @@ export const pricingTiers: PricingTier[] = [
     name: "Club slot",
     price: "R1 950",
     per: "/ month",
-    blurb: "One club, all three placements.",
+    blurb: "One club, every in-app ad slot.",
     features: [],
   },
   {

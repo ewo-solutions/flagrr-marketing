@@ -17,7 +17,7 @@ export default function ConsoleSection() {
             Two roles. One console.
           </h2>
           <p style={{ margin: "22px 0 0", fontSize: 17, fontWeight: 300, lineHeight: 1.6, color: "rgba(18,39,31,.7)" }}>
-            Club-side Flagrr runs wherever the work happens — the app, the web app or a downloadable desktop app. Same console, same roles, nothing to keep in sync.
+            Club-side Flagrr runs wherever the work happens — the app or the web app. Same console, same roles, nothing to keep in sync.
           </p>
         </Reveal>
 

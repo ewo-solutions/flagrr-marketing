@@ -11,7 +11,7 @@ export default function CashFacts() {
             One currency. Every club.
           </h2>
           <p style={{ margin: "28px 0 0", fontSize: 19, fontWeight: 300, lineHeight: 1.62, color: "rgba(18,39,31,.72)" }}>
-            Flagrr Cash is earned, never bought. It can’t be transferred, sold or cashed out — which is exactly why it holds its meaning. R1 spent earns 1 Flagrr Cash at baseline, and your club can pay richer rates on whatever it wants to move.
+            Flagrr Cash is earned, never bought. It can’t be transferred, sold or cashed out — which is exactly why it holds its meaning. Every receipt earns it, and your club sets the rates and can pay richer ones on whatever it wants to move.
           </p>
         </Reveal>
         <div

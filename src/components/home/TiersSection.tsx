@@ -28,10 +28,10 @@ function Copy() {
         A rate that climbs.
       </h2>
       <p style={{ margin: "22px 0 0", maxWidth: "38ch", fontSize: 17, fontWeight: 300, lineHeight: 1.62, color: "rgba(246,245,240,.74)" }}>
-        Tier is qualified per quarter on Flagrr Cash earned, not a lifetime total — and a quiet quarter can only drop a member one step, never all the way back.
+        Tier is qualified per quarter on Flagrr Cash earned, not a lifetime total — and a quiet quarter can only drop a member one step, never all the way back. Climbing past Bronze needs the club to have the member on its member list.
       </p>
       <div style={{ margin: "30px 0 0", padding: "18px 22px", borderLeft: "2px solid #CDDE5C", maxWidth: "38ch", fontSize: 14, fontWeight: 300, lineHeight: 1.6, color: "rgba(246,245,240,.72)" }}>
-        Gold and Platinum also get a free R100 / R200 bar voucher each quarter they qualify — paid automatically, nothing to redeem.
+        Gold and Platinum also get a bar voucher each quarter they qualify, issued automatically when their club has one in its catalogue.
       </div>
     </div>
   );

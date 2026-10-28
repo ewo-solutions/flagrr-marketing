@@ -24,10 +24,10 @@ export default function CalculatorSection() {
             What a season is worth.
           </h2>
           <p style={{ margin: "24px 0 0", maxWidth: "40ch", fontSize: 17, fontWeight: 300, lineHeight: 1.62, color: "rgba(18,39,31,.7)" }}>
-            Drag your typical month at the club. Baseline is R1 = 1 Flagrr Cash; tier multipliers stack on top.
+            Drag your typical month at the club. An illustration only: your club sets its own rates, and tier multipliers stack on top at your home club.
           </p>
           <div style={{ margin: "36px 0 0", padding: "20px 22px", borderLeft: "2px solid #00805A", fontSize: 14, fontWeight: 300, lineHeight: 1.6, color: "rgba(18,39,31,.72)", maxWidth: "40ch" }}>
-            Away-club receipts still earn at baseline — a member’s account travels with them.
+            Away-club receipts still earn — a member’s account travels with them.
           </div>
         </Reveal>
 

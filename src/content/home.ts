@@ -1,19 +1,10 @@
 import type { RewardIconKind } from "@/components/icons";
 
-export const partners = [
-  "Strand Golf Club",
-  "Kingsward Links",
-  "Hollowbrook C.C.",
-  "Vlei Bend Golf Estate",
-  "Ardmore Downs",
-  "Cape Ridge G.C.",
-];
-
 export const cashFacts = [
   {
-    stat: "R1 = 1",
-    label: "Baseline earn rate",
-    note: "Applies to any receipt, including away clubs.",
+    stat: "Any receipt",
+    label: "Earns Flagrr Cash",
+    note: "Home club or away, every scanned receipt counts.",
   },
   {
     stat: "0",
@@ -23,7 +14,7 @@ export const cashFacts = [
   {
     stat: "×1.7",
     label: "Top tier multiplier",
-    note: "Platinum earns 1.7 Flagrr Cash on every rand.",
+    note: "Platinum, at your home club. Bronze starts at ×1.",
   },
   {
     stat: "1 tap",
@@ -52,12 +43,12 @@ export const loopSteps: LoopStep[] = [
   {
     name: "Earn Flagrr Cash",
     title: "Earn.",
-    body: "Flagrr Cash lands against your club’s own rates and your tier multiplier. Streaks build. Flagged receipts still credit first and get reviewed after.",
+    body: "Flagrr Cash lands against your club’s own rates and your tier multiplier. Streaks build. Anything that looks off is held for your club to review before it credits.",
   },
   {
     name: "Redeem at the counter",
     title: "Redeem.",
-    body: "Pick from your club’s catalogue. A QR voucher and a code are issued on the spot, staff validate it in person, and the balance settles instantly.",
+    body: "Pick from your club’s catalogue. A QR voucher and a code are issued on the spot, staff validate it in person, and your Flagrr Cash settles instantly.",
   },
 ];
 
@@ -102,10 +93,10 @@ export const calcTierMults = [1, 1.2, 1.5, 1.7];
 export const clubCards = [
   { tag: "catalogue", title: "Your rewards, your rates", body: "Build the catalogue, set your own Flagrr Cash prices, add sizes and variants. Change it any morning." },
   { tag: "admin", title: "No manual reconciliation", body: "Receipts are read and rated automatically. Staff only ever touch a redemption at the counter." },
-  { tag: "fraud", title: "Flagged before you look", body: "Suspicious receipts surface in a review queue with the member already reassured and credited." },
+  { tag: "fraud", title: "Flagged before you look", body: "Suspicious receipts are held in a review queue. Your club confirms or approves them before any Flagrr Cash is credited." },
   { tag: "analytics", title: "Who actually comes back", body: "Member stats, redemption activity and per-staff redemptions in one dashboard." },
   { tag: "branding", title: "Your club on their home screen", body: "Club name and logo sit at the top of every member’s app. Flagrr runs the plumbing." },
-  { tag: "ops", title: "Desk work stays at the desk", body: "Admin and staff tools run anywhere — the app, the web app or a desktop app. Same console either way." },
+  { tag: "ops", title: "Desk work stays at the desk", body: "Admin and staff tools run anywhere — the app or the web app. Same console either way." },
 ];
 
 export const plan = {

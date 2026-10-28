@@ -16,7 +16,7 @@ export default function ShowcaseSection() {
             Native to the app, not bolted on.
           </h2>
           <p style={{ margin: "22px 0 0", maxWidth: "44ch", fontSize: 16, fontWeight: 300, lineHeight: 1.62, color: "rgba(246,245,240,.72)" }}>
-            The banner slot sits between a golfer’s Flagrr Cash balance and their streak — styled to match the app, clearly labelled as an ad, and never in the way of a redemption.
+            The banner slot sits between a golfer’s Flagrr Cash and their streak — styled to match the app, clearly labelled as an ad, and never in the way of a redemption.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 12, margin: "28px 0 0" }}>
             {[

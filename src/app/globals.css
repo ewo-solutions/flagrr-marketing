@@ -335,3 +335,11 @@ input[type="range"].fl-range::-moz-range-thumb {
     display: block !important;
   }
 }
+
+/* Course & My Golf phones: the front phone sits off-centre beside the
+   second one, and centres on its own once the second is hidden. */
+@media (max-width: 900px) {
+  .fl-oncourse-front {
+    transform: none !important;
+  }
+}

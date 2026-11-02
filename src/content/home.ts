@@ -96,7 +96,7 @@ export const clubCards = [
   { tag: "fraud", title: "Flagged before you look", body: "Suspicious receipts are held in a review queue. Your club confirms or approves them before any Flagrr Cash is credited." },
   { tag: "analytics", title: "Who actually comes back", body: "Member stats, redemption activity and per-staff redemptions in one dashboard." },
   { tag: "branding", title: "Your club on their home screen", body: "Club name and logo sit at the top of every member’s app. Flagrr runs the plumbing." },
-  { tag: "ops", title: "Desk work stays at the desk", body: "Admin and staff tools run anywhere — the app or the web app. Same console either way." },
+  { tag: "ops", title: "Desk work stays at the desk", body: "Admin and staff tools run in any browser: a desktop console with ⌘K search, or a phone layout for the counter. Same console either way." },
 ];
 
 export const plan = {
@@ -112,6 +112,7 @@ export const plan = {
     "Reward catalogue with variants and per-item Flagrr Cash pricing",
     "Automatic receipt OCR, matching and rating",
     "Quarterly tiers, streaks and earn multipliers",
+    "Your course mapped: hole maps, scorecard and stats for members",
     "Fraud review queue with duplicate detection",
     "Member list, roster verification and stats",
     "Staff accounts and in-person voucher redemption",

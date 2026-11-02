@@ -33,7 +33,7 @@ src/
     globals.css          Reset, design tokens, keyframes, responsive helpers
   components/
     Nav.tsx, Footer.tsx   Shared nav (dark/light theme) and footer (full/condensed)
-    PhoneScreen.tsx       Reusable phone-app screen artwork (prop: screen 1-6)
+    PhoneScreen.tsx       Reusable phone-app screen artwork (prop: screen 1-9; 8 is the Course hole view, 9 is My Golf)
     PhoneFrame.tsx        Device bezel that hosts PhoneScreen at any size
     icons.tsx             Inline SVG icon set (tab bar + reward categories)
     Reveal.tsx            IntersectionObserver fade/rise-in wrapper

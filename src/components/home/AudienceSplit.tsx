@@ -15,7 +15,7 @@ const cards = [
     href: "/golfers",
     tag: "for golfers",
     title: "You were spending it anyway.",
-    body: "Earn on the pro shop, the halfway house, the green fee. Watch your tier climb. Redeem for things your club actually stocks.",
+    body: "Earn on the pro shop, the halfway house, the green fee. Take the hole maps and your scorecard out with you. Redeem for things your club actually stocks.",
     cta: "See the member app",
   },
 ];

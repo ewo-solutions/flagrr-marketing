@@ -3,13 +3,14 @@ import Nav from "@/components/Nav";
 import { FooterCondensed } from "@/components/Footer";
 import ClubsHero from "@/components/clubs/ClubsHero";
 import ConsoleSection from "@/components/clubs/ConsoleSection";
+import CourseMapSection from "@/components/clubs/CourseMapSection";
 import BeforeAfterSection from "@/components/clubs/BeforeAfterSection";
 import DemoSection from "@/components/clubs/DemoSection";
 
 export const metadata: Metadata = {
   title: "For Clubs",
   description:
-    "A branded loyalty programme, a reward catalogue you control, member analytics and automatic fraud review. R2 500 a month to start.",
+    "A branded loyalty programme, a reward catalogue you control, member analytics, automatic fraud review and your course mapped for members. R2 500 a month to start.",
 };
 
 export default function ClubsPage() {
@@ -28,6 +29,7 @@ export default function ClubsPage() {
       />
       <ClubsHero />
       <ConsoleSection />
+      <CourseMapSection />
       <BeforeAfterSection />
       <DemoSection />
       <FooterCondensed

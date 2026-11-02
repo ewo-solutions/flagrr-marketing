@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import { FooterCondensed } from "@/components/Footer";
 import GolfersHero from "@/components/golfers/GolfersHero";
 import WhatYouGet from "@/components/golfers/WhatYouGet";
+import OnCourseSection from "@/components/golfers/OnCourseSection";
 import ReferralProgramSection from "@/components/golfers/ReferralProgramSection";
 import TiersStreaks from "@/components/golfers/TiersStreaks";
 import FAQSection from "@/components/golfers/FAQSection";
@@ -11,7 +12,7 @@ import GetAppSection from "@/components/golfers/GetAppSection";
 export const metadata: Metadata = {
   title: "For Golfers",
   description:
-    "Scan the receipt you were going to bin. Earn Flagrr Cash on it. Spend it on rewards your club actually stocks. Free forever.",
+    "Scan the receipt you were going to bin. Earn Flagrr Cash on it. Spend it on rewards your club actually stocks. Hole maps, a scorecard and your stats on mapped courses. Free forever.",
 };
 
 export default function GolfersPage() {
@@ -23,6 +24,7 @@ export default function GolfersPage() {
         links={[
           { label: "Overview", href: "/" },
           { label: "For clubs", href: "/clubs" },
+          { label: "On the course", href: "#course" },
           { label: "For advertisers", href: "/advertisers" },
           { label: "Questions", href: "#faq" },
         ]}
@@ -30,6 +32,7 @@ export default function GolfersPage() {
       />
       <GolfersHero />
       <WhatYouGet />
+      <OnCourseSection />
       <ReferralProgramSection />
       <TiersStreaks />
       <FAQSection />

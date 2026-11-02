@@ -2,15 +2,13 @@ export const statBar = [
   { v: "Cross-platform", k: "app and web" },
   { v: "Automatic", k: "receipt rating" },
   { v: "2 roles", k: "one console" },
+  { v: "Your course", k: "mapped for members" },
   { v: "R2 500", k: "a month to start" },
 ];
 
-export type BadgeKind = "priority" | "billing" | "expired" | "draft" | "watch" | "used" | "claimed" | "live" | "valid" | "healthy" | "open";
-
-export interface ConsoleRow {
-  a: string;
-  b: string;
-  c: BadgeKind;
+export interface NavGroup {
+  label?: string;
+  items: string[];
 }
 
 export interface Role {
@@ -19,80 +17,61 @@ export interface Role {
   title: string;
   body: string;
   caps: string[];
-  nav: string[];
-  navActive: number;
-  panel: string;
-  stats: { v: string; k: string }[];
-  rows: ConsoleRow[];
+  nav: NavGroup[];
+  navActive: string;
 }
 
+// Mirrors the admin console's sidebar groups (mobile/src/navigation/adminNavConfig.ts
+// in lourens-tech/flaggr). Keep in step when the console's navigation changes.
 export const roles: Role[] = [
   {
-    name: "course_admin",
+    name: "Course admin",
     slug: "course-admin",
     title: "The club’s own admin",
-    body: "Everything the club runs day to day: the catalogue, the staff, the members, the money and the awkward receipts.",
+    body: "Everything the club runs day to day: the catalogue, the staff, the members and the awkward receipts. What needs you shows up first.",
     caps: [
+      "Flagged receipts and new enquiries waiting on the home page",
       "Build and price the reward catalogue",
-      "Send push notifications to segmented members",
-      "Create and revoke staff accounts",
-      "Review your own flagged receipts",
-      "Answer member enquiries and tickets",
-      "See subscription and billing status",
+      "Approve or reject flagged receipts before any Flagrr Cash credits",
+      "Upload your member roster so members can climb tiers",
+      "Answer member enquiries in live chat",
+      "Push notifications to every member or a single tier",
+      "Staff logins and a second club admin",
+      "Send your scorecard and get your course mapped",
     ],
-    nav: ["Dashboard", "Rewards", "Members", "Receipts", "Staff", "Support", "Billing"],
-    navActive: 1,
-    panel: "Reward catalogue",
-    stats: [
-      { v: "412", k: "Active members" },
-      { v: "28", k: "Live rewards" },
-      { v: "R2 500", k: "Plan / month" },
+    nav: [
+      { items: ["Home"] },
+      { label: "Members", items: ["Enquiries", "Fraud Review", "Member Roster"] },
+      { label: "Rewards", items: ["Rewards", "Products and Activities", "Vouchers"] },
+      { label: "Messaging", items: ["Push Notifications"] },
+      { label: "Club", items: ["Staff and Admins", "Club Settings", "Flagrr Support"] },
     ],
-    rows: [
-      { a: "Twilight Round for Two", b: "3 500 FC", c: "live" },
-      { a: "Pro Shop Voucher R500", b: "5 000 FC", c: "live" },
-      { a: "Cart Hire — 18 holes", b: "1 200 FC", c: "live" },
-      { a: "Lesson with the Pro", b: "4 000 FC", c: "draft" },
-      { a: "Halfway House Combo", b: "600 FC", c: "live" },
-    ],
+    navActive: "Home",
   },
   {
-    name: "staff",
+    name: "Staff",
     slug: "staff",
-    title: "Front desk and member support",
-    body: "One login for the counter and the inbox: take the code, confirm the voucher, hand over the reward — then claim member enquiries and triage anything urgent. No training day required.",
+    title: "The counter",
+    body: "One login for the pro shop, the bar or the kitchen: look up the code or scan the QR, check the reward and the member, redeem it. That’s where their access stops.",
     caps: [
-      "Validate voucher codes in person",
-      "See what the reward actually is",
-      "Redemptions logged against your name",
-      "Enquiries from the club’s own members",
-      "Claim and hand off tickets, priority triage",
-      "Minimal profile, nothing else exposed",
+      "Look up a voucher by its code or scan the QR",
+      "See the reward and the member before redeeming",
+      "Every redemption logged against their name",
+      "Raise a ticket with Flagrr support",
+      "Username login, so staff can share one email address",
+      "No member lists, reports or settings",
     ],
-    nav: ["Redeem", "History", "Inbox", "Claimed", "Escalations", "Profile"],
-    navActive: 0,
-    panel: "Redemption desk",
-    stats: [
-      { v: "9", k: "Today" },
-      { v: "61", k: "This month" },
-      { v: "7", k: "Open enquiries" },
-    ],
-    rows: [
-      { a: "FLGR-8T4K", b: "Twilight Round for Two", c: "valid" },
-      { a: "FLGR-2QM7", b: "Pro Shop Voucher R500", c: "valid" },
-      { a: "FLGR-9XD1", b: "Cart Hire — 18 holes", c: "used" },
-      { a: "FLGR-5RB8", b: "Halfway House Combo", c: "valid" },
-      { a: "FLGR-1KK2", b: "Lesson with the Pro", c: "expired" },
-    ],
+    nav: [{ items: ["Vouchers", "Flagrr Support", "Profile"] }],
+    navActive: "Vouchers",
   },
 ];
 
-export function badgeColors(c: BadgeKind): { bg: string; fg: string } {
-  if (c === "priority" || c === "billing" || c === "expired") return { bg: "rgba(222,92,92,.14)", fg: "#A33" };
-  if (c === "draft" || c === "watch" || c === "used") return { bg: "#FDE9C8", fg: "#8A5A00" };
-  if (c === "claimed") return { bg: "rgba(18,39,31,.08)", fg: "rgba(18,39,31,.6)" };
-  return { bg: "rgba(0,128,90,.13)", fg: "#00805A" };
-}
+export const courseMapSteps = [
+  { stage: "Send your scorecard", body: "Upload up to 12 photos of your card from the Course map panel on your dashboard." },
+  { stage: "Photos received", body: "The Flagrr team is told straight away and picks them up." },
+  { stage: "Being built", body: "Every hole is drawn from your card and the course layout. Tees, ratings, par and stroke index are checked before anything goes live." },
+  { stage: "Live", body: "Your members get hole maps, a scorecard and My Golf at your course. Flagrr members from other clubs can play it as an away course." },
+];
 
 export const without = [
   "Paper punch cards behind the till",
@@ -108,4 +87,5 @@ export const withFlagrr = [
   "A catalogue you change any morning",
   "Member stats and redemption activity, live",
   "Flagged receipts queued and already handled",
+  "Your course mapped, with a scorecard in every pocket",
 ];

@@ -29,6 +29,13 @@ export const referralWays = [
   },
 ];
 
+export const onCourse = [
+  { tag: "course", title: "Your club’s card, mapped", body: "Every hole drawn from your club’s own scorecard: front, middle and back of the green, plus reach and carry over the bunkers and water." },
+  { tag: "bag", title: "The right club, suggested", body: "Tell it how far you carry each club. It picks one, shows where to aim and what it leaves, and warns you when a hazard sits inside your usual miss." },
+  { tag: "card", title: "Score as you go", body: "Stableford or stroke play, net and gross, putts and fairways if you want them. Enter your GolfRSA index and it shows your course and playing handicap with the working." },
+  { tag: "my golf", title: "Know your game", body: "Stableford average, best round, score by par, your toughest holes and front nine against back nine, all from the rounds you finish." },
+];
+
 export const faqs = [
   { q: "What is Flagrr Cash, really?", a: "A loyalty currency, not money. You earn it on what you spend at the club and redeem it for rewards your club offers. It has no monetary value, can’t be bought, sold, transferred or cashed out — only earned and redeemed." },
   { q: "How much do I earn?", a: "Every receipt you scan earns Flagrr Cash. Your club sets its own rates, including richer ones on specific products or activities, and at your home club your tier multiplier stacks on top: Bronze 1x, Silver 1.2x, Gold 1.5x, Platinum 1.7x." },
@@ -37,5 +44,7 @@ export const faqs = [
   { q: "What if I play away from my home club?", a: "Snap the receipt anyway. An away-club receipt still earns, so your account travels with you." },
   { q: "What happens if a receipt gets flagged?", a: "The receipt shows as pending and the Flagrr Cash is held while your club reviews it. If it’s approved, the Flagrr Cash is credited; if it isn’t, it isn’t. You’re told plainly either way." },
   { q: "How do I actually redeem something?", a: "Pick a reward from your club’s catalogue in the app. You get a voucher with a code; staff validate it in person at the counter." },
+  { q: "Can I use Flagrr on the course?", a: "Yes, on any course Flagrr has mapped, home or away. Pick your tees and the app shows each hole with green distances and a suggested club, and keeps your scorecard. Clubs go live as their maps are built, so if yours says coming soon, it’s on its way. GPS tracking is coming soon too: for now, drag the ball to where you’re standing." },
+  { q: "Does Flagrr work out my handicap?", a: "No. You enter your Handicap Index as it shows on GolfRSA, and Flagrr works out your course and playing handicap for the tees you pick, using the World Handicap System. My Golf tracks your rounds, but your official index stays with GolfRSA." },
   { q: "My club isn’t on Flagrr.", a: "Tell them. There’s a page on this site written for clubs — send it to the pro shop or the club manager. Give us their name and we’ll make the introduction ourselves." },
 ];

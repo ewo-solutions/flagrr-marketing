@@ -156,7 +156,7 @@ function initInstagram() {
         const posts = d && Array.isArray(d.posts) ? d.posts.filter((p) => p.image && p.permalink).slice(0, 6) : [];
         if (posts.length < 6) return;
         grid.innerHTML = posts.map((p) => {
-          const alt = esc((p.caption || 'Flagrr on Instagram').split('\n')[0].slice(0, 120));
+          const alt = esc((p.alt || p.caption || 'Flagrr on Instagram').split('\n')[0].slice(0, 120));
           const kind = p.type === 'VIDEO' ? PLAY : p.type === 'CAROUSEL_ALBUM' ? STACK : '';
           return '<li><a class="ig-tile" href="' + esc(p.permalink) + '" target="_blank" rel="noopener"><img src="' + esc(p.image) + '" alt="' + alt + '" loading="lazy" decoding="async">' + kind + '<span class="ig-ov" aria-hidden="true">' + IG + '</span></a></li>';
         }).join('');

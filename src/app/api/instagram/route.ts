@@ -17,9 +17,14 @@ import { NextResponse } from "next/server";
  *    (for example Behold). The service holds the Instagram connection and its
  *    token renewals, so nothing here needs maintaining. Used first when set.
  *
- * Responses are cached for 15 minutes, so a new post appears within about
- * that long. If neither variable is set, or Instagram errors, the route
- * answers 503 and the homepage keeps the posts it was built with.
+ * With neither set, the @flagrrgolf Behold JSON feed below is used. That
+ * feed URL is public (it is the same URL a Behold widget loads in the
+ * browser), so it lives in code rather than in Vercel settings.
+ *
+ * Behold's free plan counts each feed load against a monthly allowance, so
+ * Behold responses are cached for an hour; direct Instagram calls for 15
+ * minutes. If Instagram or the feed errors, the route answers 503 and the
+ * pages keep the posts they were built with.
  */
 
 export interface FeedPost {
@@ -27,11 +32,14 @@ export interface FeedPost {
   permalink: string;
   image: string;
   caption: string;
+  alt?: string;
   type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
   timestamp?: string;
 }
 
 const REVALIDATE_SECONDS = 900;
+const FEED_REVALIDATE_SECONDS = 3600;
+const DEFAULT_FEED_URL = "https://feeds.behold.so/xA98yxsJov4YEtRjsdHb";
 const LIMIT = 12;
 const TIMEOUT_MS = 8000;
 const GRAPH = "https://graph.instagram.com";
@@ -85,7 +93,7 @@ async function fromGraph(token: string): Promise<FeedPost[]> {
 
 /** A hosted feed service's JSON (Behold's shape, with loose fallbacks). */
 async function fromFeedUrl(url: string): Promise<FeedPost[]> {
-  const d = (await getJson(url, REVALIDATE_SECONDS)) as unknown;
+  const d = (await getJson(url, FEED_REVALIDATE_SECONDS)) as unknown;
   const list = (Array.isArray(d) ? d : ((d as { posts?: unknown[] })?.posts ?? [])) as Record<string, unknown>[];
   return list.map((p) => {
     const sizes = (p.sizes || {}) as Record<string, { mediaUrl?: string }>;
@@ -100,6 +108,7 @@ async function fromFeedUrl(url: string): Promise<FeedPost[]> {
       permalink: str(p.permalink),
       image,
       caption: str(p.prunedCaption ?? p.caption),
+      alt: str(p.altText) || undefined,
       type,
       timestamp: str(p.timestamp) || undefined,
     };
@@ -107,20 +116,17 @@ async function fromFeedUrl(url: string): Promise<FeedPost[]> {
 }
 
 export async function GET() {
-  const feedUrl = process.env.INSTAGRAM_FEED_URL?.trim();
   const token = process.env.INSTAGRAM_ACCESS_TOKEN?.trim();
-  if (!feedUrl && !token) {
-    return NextResponse.json({ posts: [], error: "Instagram feed is not configured" }, { status: 503 });
-  }
+  const feedUrl = process.env.INSTAGRAM_FEED_URL?.trim() || (token ? "" : DEFAULT_FEED_URL);
   try {
     const raw = feedUrl ? await fromFeedUrl(feedUrl) : await fromGraph(token as string);
     const posts = raw
       .filter((p) => p.id && isHttps(p.permalink) && isHttps(p.image))
-      .map((p) => ({ ...p, caption: p.caption.slice(0, 600) }))
+      .map((p) => ({ ...p, caption: p.caption.slice(0, 600), alt: p.alt?.slice(0, 300) }))
       .slice(0, LIMIT);
     return NextResponse.json(
       { posts },
-      { headers: { "Cache-Control": `public, s-maxage=${REVALIDATE_SECONDS}, stale-while-revalidate=86400` } },
+      { headers: { "Cache-Control": `public, s-maxage=${feedUrl ? FEED_REVALIDATE_SECONDS : REVALIDATE_SECONDS}, stale-while-revalidate=86400` } },
     );
   } catch (err) {
     console.error("[instagram] feed failed:", err instanceof Error ? err.message : err);
